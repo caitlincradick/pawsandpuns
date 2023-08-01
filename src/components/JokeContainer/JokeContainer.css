@@ -1,0 +1,7 @@
+.joke-container {
+  border:solid black 2px
+}
+.joke {
+  border:solid black 2px; 
+  font-size: xx-large;
+}
