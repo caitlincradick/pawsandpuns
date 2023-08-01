@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Joke = () => {
+const Joke = ({joke}) => {
   return (
-    <div>Joke</div>
+    <div>{joke.joke}</div>
   )
 }
 
