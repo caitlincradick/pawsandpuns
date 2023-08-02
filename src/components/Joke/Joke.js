@@ -1,24 +1,33 @@
 import React from 'react'
-import { useState} from 'react'
+import { useState, useEffect} from 'react'
 import "../../heart.png"
 import "../../empty-heart.png"
 import './Joke.css'
 
 
-const Joke = ({joke, addSaved, saved, setSaved, savedList, setSavedList}) => {
+const Joke = ({joke, addSaved, savedList, setSavedList}) => {
+  const [saved, setSaved] = useState(false)
 
+useEffect(() => {
+ if(savedList.includes(joke.joke)){
+  setSaved(true)
+ }
+},[])
 
 function handleSaved(event){
   event.preventDefault()
   const newJoke= joke.joke 
-  addSaved(newJoke)
   setSaved(true)
+  if(!savedList.includes(joke.joke)){
+  addSaved(newJoke)
+}
 }
 
 function handleUnsave(){
+  const updatedSavedList = savedList.filter(savedJoke => savedJoke !== joke.joke)
+  setSavedList(updatedSavedList)
   setSaved(false)
 }
-
 
   return (
     <div className='joke-card'>
@@ -28,7 +37,4 @@ function handleUnsave(){
   )
 }
    
-
-
-
 export default Joke
