@@ -1,11 +1,18 @@
 import React from 'react'
 import './NavBar.css'
+import {Link} from 'react-router-dom'
 
-const NavBar = () => {
+const NavBar = ({saved, setSaved}) => {
   return (
   <nav>
-    <h1>Paws & Puns</h1>
+    <Link to="/">
+      <div>
+    <h1 onClick={() => setSaved(false) }>Paws & Puns</h1>
+    </div>
+    </Link>
+    <Link to= "/saved">
     <button>Purrfect Jokes</button>
+    </Link>
   </nav>
   )
 }

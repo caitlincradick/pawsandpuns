@@ -4,11 +4,11 @@ import { getJokes, getCat } from '../../apiCalls'
 import Joke from '../Joke/Joke'
 import './JokeContainer.css'
 
-const JokeContainer = () => {
- const [joke, setJoke] = useState("")
+const JokeContainer = ({saved, setSaved, savedList, setSavedList, addSaved}) => {
+const [joke, setJoke] = useState("")
 const [cat, setCat] = useState("")
+console.log(joke)
 
-console.log(cat)
 
 useEffect(() => {
   getCat()
@@ -27,9 +27,9 @@ useEffect(() => {
 
   return (
     <div className ='joke-container'>
-      <img src={cat}></img>
+      <img src={cat} alt="cat-gif"></img>
       <div className= 'joke'>
-     <Joke joke={joke} />
+     <Joke joke={joke} saved={saved} setSaved={setSaved} savedList={savedList} setSavedList={setSavedList} addSaved={addSaved} />
      </div>
     </div>
   )
