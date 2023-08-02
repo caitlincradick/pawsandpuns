@@ -7,8 +7,7 @@ import {Routes, Route} from 'react-router-dom'
 import SavedJokes from '../SavedJokes/SavedJokes';
 
 function App() {
- 
-  const [savedList, setSavedList] = useState([])
+const [savedList, setSavedList] = useState([])
 
 
   function addSaved(newJoke) {

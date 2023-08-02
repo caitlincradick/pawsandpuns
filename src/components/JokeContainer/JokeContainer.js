@@ -5,9 +5,11 @@ import Joke from '../Joke/Joke'
 import './JokeContainer.css'
 
 const JokeContainer = ({saved, setSaved, savedList, setSavedList, addSaved}) => {
+  
 const [joke, setJoke] = useState("")
 const [cat, setCat] = useState("")
-console.log(joke)
+
+console.log('mockjoeks',joke)
 
 
 useEffect(() => {
