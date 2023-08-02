@@ -1,7 +1,8 @@
 import React from 'react'
+import {useState} from 'react'
 
 const SavedJokes = ({saved, setSaved, savedList, setSavedList}) => {
-  console.log('saved list', savedList)
+ const [unsave, setUnsave] = useState(true)
 
   const savedJokes = savedList.map(savedJoke => {
   return (
@@ -14,7 +15,7 @@ const SavedJokes = ({saved, setSaved, savedList, setSavedList}) => {
   return (
   <div> 
     <h1> My Saved Jokes</h1>
-    <p>{savedJokes}</p>
+    {savedJokes}
     </div>
     )
 }
