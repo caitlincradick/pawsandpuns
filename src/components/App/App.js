@@ -7,7 +7,7 @@ import {Routes, Route} from 'react-router-dom'
 import SavedJokes from '../SavedJokes/SavedJokes';
 
 function App() {
-  const [saved, setSaved] = useState(false)
+ 
   const [savedList, setSavedList] = useState([])
 
 
@@ -17,13 +17,13 @@ function App() {
   
   return (
     <div className="App">
-    <NavBar saved={saved} setSaved={setSaved} />
+    <NavBar />
   <Routes>
     <Route path = "/" element = {
-      <JokeContainer saved={saved} setSaved={setSaved} savedList={savedList} setSavedList={setSavedList} addSaved={addSaved} />
+      <JokeContainer  savedList={savedList} setSavedList={setSavedList} addSaved={addSaved} />
       } />
       <Route path= "/saved" element= {
-        <SavedJokes saved={savedList} setSaved={setSavedList} savedList={savedList} setSavedList={setSavedList}/>
+        <SavedJokes savedList={savedList} setSavedList={setSavedList}/>
       }
       />
     </Routes>
