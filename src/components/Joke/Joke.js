@@ -35,8 +35,9 @@ function handleUnsave(event){
   return (
     <div className='joke-card' >
       <p>{joke.joke}</p>
-      <div className='heart' >
-      {!saved ? (<img  onClick={handleSaved} className='empty-heart' src={require('../../empty-heart.png')} />) : (<img onClick={event=>handleUnsave(event)} className='full-heart' src={require('../../heart.png')} id={id} />)}
+      <div className='heart'id={id} >
+        
+      {!saved ? (<img id={id} onClick={handleSaved} className='empty-heart' src={require('../../empty-heart.png')} />) : (<img onClick={event=>handleUnsave(event)} className='full-heart' src={require('../../heart.png')} id={id} />)}
       </div>
       </div>
   )

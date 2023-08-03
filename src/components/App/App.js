@@ -32,7 +32,7 @@ const [saved, setSaved] = useState(false)
       <JokeContainer  savedList={savedList} setSavedList={setSavedList} addSaved={addSaved} joke={joke} setJoke={setJoke} saved={saved} setSaved={setSaved}/>
       } />
       <Route path= "/saved" element= {
-        <SavedJokes savedList={savedList} setSavedList={setSavedList} joke={joke} setJoke={setJoke} saved={saved} setSaved={setSaved}/>
+        <SavedJokes savedList={savedList} setSavedList={setSavedList} joke={joke} setJoke={setJoke} saved={true} setSaved={setSaved}/>
       }
       />
     </Routes>
