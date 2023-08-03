@@ -33,7 +33,7 @@ function handleUnsave(event){
 }
 
   return (
-    <div className='joke-card' >
+    <div className='joke-card' key={id} >
       <p>{joke.joke}</p>
       <div className='heart'id={id} >
         

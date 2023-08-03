@@ -9,12 +9,12 @@ const SavedJokes = ({joke, saved, setSaved, savedList, setSavedList}) => {
 console.log('saved list', savedList)
   const savedJokes = savedList.map(savedJoke => (
 // console.log('SAVED JOKE',savedJoke)
-  <Joke joke={savedJoke} saved={saved} setSaved={setSaved} savedList={savedList} setSavedList={setSavedList} id={joke.id}/>  
+  <Joke key={savedJoke.id} joke={savedJoke} saved={saved} setSaved={setSaved} savedList={savedList} setSavedList={setSavedList} id={joke.id}/>  
   ))
 
   console.log('saved JOKES', savedJokes)
   return (
-  <div className ='saved-container'> 
+  <div className ='saved-container' key={Date.now()}> 
     <h1> My Saved Jokes</h1>
     <div className ='saved'>
     {savedJokes}
