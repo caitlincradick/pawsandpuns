@@ -1,21 +1,24 @@
 import React from 'react'
 import {useState} from 'react'
+import Joke from '../Joke/Joke'
 
-const SavedJokes = ({saved, setSaved, savedList, setSavedList}) => {
- const [unsave, setUnsave] = useState(true)
+const SavedJokes = ({joke, saved, setSaved, savedList, setSavedList}) => {
 
-  const savedJokes = savedList.map(savedJoke => {
+
+
+console.log('saved list', savedList)
+  const savedJokes = savedList.map(savedJoke => (
+// console.log('SAVED JOKE',savedJoke)
+  <Joke joke={savedJoke} saved={saved} setSaved={setSaved} savedList={savedList} setSavedList={setSavedList} id={joke.id}/>  
+  ))
+
+  console.log('saved JOKES', savedJokes)
   return (
-    <div>
-      <p>{savedJoke}</p>
-    </div>
-  )
-})
-
-  return (
-  <div> 
+  <div className ='saved-container'> 
     <h1> My Saved Jokes</h1>
+    <div className ='saved'>
     {savedJokes}
+    </div>
     </div>
     )
 }

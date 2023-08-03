@@ -2,3 +2,13 @@
   height: 30px;
   width:30px;
 }
+
+.joke-card {
+  border:solid black 2px
+}
+
+.heart{
+  border:solid black 2px;
+  height: 30px;
+  width:30px;
+}

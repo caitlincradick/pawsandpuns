@@ -8,21 +8,31 @@ import SavedJokes from '../SavedJokes/SavedJokes';
 
 function App() {
 const [savedList, setSavedList] = useState([])
-
+const [joke, setJoke] = useState({id:"", joke:""})
+const [saved, setSaved] = useState(false)
 
   function addSaved(newJoke) {
     setSavedList([...savedList, newJoke])
   }
+  
+  useEffect(() => {
+  getJokes()
+    .then(data => {
+      setJoke(data)
+    })
+    //add .catch for error
+}, [])
+
   
   return (
     <div className="App">
     <NavBar />
   <Routes>
     <Route path = "/" element = {
-      <JokeContainer  savedList={savedList} setSavedList={setSavedList} addSaved={addSaved} />
+      <JokeContainer  savedList={savedList} setSavedList={setSavedList} addSaved={addSaved} joke={joke} setJoke={setJoke} saved={saved} setSaved={setSaved}/>
       } />
       <Route path= "/saved" element= {
-        <SavedJokes savedList={savedList} setSavedList={setSavedList}/>
+        <SavedJokes savedList={savedList} setSavedList={setSavedList} joke={joke} setJoke={setJoke} saved={saved} setSaved={setSaved}/>
       }
       />
     </Routes>
