@@ -15,11 +15,16 @@ const [saved, setSaved] = useState(false)
     setSavedList([...savedList, newJoke])
   }
   
-  useEffect(() => {
-  getJokes()
+  function showMoreJokes () {
+    getJokes()
     .then(data => {
       setJoke(data)
+      setSaved(false)
     })
+  }
+ 
+  useEffect(() => {
+  showMoreJokes()
     //add .catch for error
 }, [])
 
@@ -29,7 +34,7 @@ const [saved, setSaved] = useState(false)
     <NavBar />
   <Routes>
     <Route path = "/" element = {
-      <JokeContainer  savedList={savedList} setSavedList={setSavedList} addSaved={addSaved} joke={joke} setJoke={setJoke} saved={saved} setSaved={setSaved}/>
+      <JokeContainer  showMoreJokes={showMoreJokes} savedList={savedList} setSavedList={setSavedList} addSaved={addSaved} joke={joke} setJoke={setJoke} saved={saved} setSaved={setSaved}/>
       } />
       <Route path= "/saved" element= {
         <SavedJokes savedList={savedList} setSavedList={setSavedList} joke={joke} setJoke={setJoke} saved={true} setSaved={setSaved}/>

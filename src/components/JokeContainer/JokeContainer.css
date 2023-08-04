@@ -7,7 +7,9 @@
 .joke {
   /* border:solid pink 2px;  */
   font-size: xx-large;
- 
+ display: flex;
+ flex-direction: column;
+ align-items: center;
   border-radius: 80%;
 }
 
@@ -17,4 +19,15 @@
   margin-right:10%;
   margin-left:10%;
   border-radius: 10%;
+}
+
+.random-btn {
+  font-weight: 400;
+  color:#ff8b60;
+  border-radius: 20%;
+  height:7vh;
+  border:none;
+  background-color: whitesmoke;
+  font-family: 'Indie Flower', cursive;
+  font-size:medium;
 }
