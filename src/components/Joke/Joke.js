@@ -39,7 +39,7 @@ if(jokeErr){
     <div className='joke-card' key={id} >
       {jokeLoading ? <h1 className='err-message'>Loading Jokes....</h1> : <p>{joke.joke}</p>}
       <div className='heart' id={id} >
-        {!saved ? (<img id={id} onClick={handleSaved} className='empty-heart' src={require('../../images/empty-heart.png')} />) : (<img onClick={event => handleUnsave(event)} className='full-heart' src={require('../../images/heart.png')} id={id} />)}
+        {!saved ? (<img id={id} onClick={handleSaved} className='empty-heart'alt='empty heart logo' src={require('../../images/empty-heart.png')} />) : (<img onClick={event => handleUnsave(event)} className='full-heart' alt='full heart logo' src={require('../../images/heart.png')} id={id} />)}
       </div>
     </div>
   )

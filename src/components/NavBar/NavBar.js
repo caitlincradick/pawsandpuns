@@ -4,12 +4,12 @@ import "../../images/paws-puns-logo.png"
 import {Link} from 'react-router-dom'
 
 const NavBar = () => {
-  
+
   return (
     <nav>
       <Link to="/">
         <div className='logo'>
-          <img className='kitty' src={require('../../images/paws-puns-logo.png')}></img>
+          <img className='kitty' alt='paws and puns logo with cute cat' src={require('../../images/paws-puns-logo.png')}></img>
         </div>
       </Link>
       <Link to="/saved">
