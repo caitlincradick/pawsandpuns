@@ -5,7 +5,7 @@ import "../../empty-heart.png"
 import './Joke.css'
 
 
-const Joke = ({joke, addSaved, savedList, setSavedList, saved, setSaved, id}) => {
+const Joke = ({joke, addSaved, savedList, setSavedList, saved, setSaved, id, jokeLoading, jokeErr}) => {
   // const [saved, setSaved] = useState(false)
 
 useEffect(() => {
@@ -32,9 +32,13 @@ function handleUnsave(event){
 }
 }
 
+if(jokeErr){
+  return <h1 className='err-message'>An error has occured: {jokeErr}</h1>
+}
+
   return (
     <div className='joke-card' key={id} >
-      <p>{joke.joke}</p>
+      {jokeLoading ? <h1 className='err-message'>Loading Jokes....</h1> : <p>{joke.joke}</p>}
       <div className='heart'id={id} >
         
       {!saved ? (<img id={id} onClick={handleSaved} className='empty-heart' src={require('../../empty-heart.png')} />) : (<img onClick={event=>handleUnsave(event)} className='full-heart' src={require('../../heart.png')} id={id} />)}
