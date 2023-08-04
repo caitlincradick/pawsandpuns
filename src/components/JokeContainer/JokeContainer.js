@@ -9,6 +9,7 @@ const [cat, setCat] = useState("")
 const [catLoading, setCatLoading] = useState(false)
 const [catErr, setCatErr] = useState("")
 const [jokeLoading, setJokeLoading] = useState("")
+const [jokeErr, setJokeErr] = useState("")
 
 console.log('ID', joke.id)
 
@@ -17,7 +18,6 @@ useEffect(() => {
   setCatLoading(true)
   getCat()
     .then(data => setCat(data.url))
-    
       .catch(catErr => {
         if(catErr === 500) {
           setCatErr('Oh no, looks there is a server error!')
@@ -37,7 +37,16 @@ useEffect(() => {
       setJoke(data)
       setSaved(false)
     })
-    //add .catch for error
+    .catch(jokeErr => {
+      if(jokeErr === 500) {
+        setJokeErr('Oh no, looks there is a server error!')
+      } else {
+        setJokeErr(jokeErr)
+      }
+    })
+    .finally(() => {
+      setJokeLoading(false)
+    })
 }, [])
 
 if(catErr){
