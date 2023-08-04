@@ -1,6 +1,6 @@
 import React from 'react'
 import './NavBar.css'
-import "../../paws-puns-logo.png"
+import "../../images/paws-puns-logo.png"
 import {Link} from 'react-router-dom'
 
 const NavBar = () => {
@@ -8,7 +8,7 @@ const NavBar = () => {
   <nav>
     <Link to="/">
       <div className='logo'>
-    <img className= 'kitty' src={require('../../paws-puns-logo.png')}></img>
+    <img className= 'kitty' src={require('../../images/paws-puns-logo.png')}></img>
     {/* onClick={() => setSaved(false) } */}
     </div>
     </Link>

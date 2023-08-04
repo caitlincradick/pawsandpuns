@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect} from 'react'
-import "../../heart.png"
-import "../../empty-heart.png"
+import "../../images/heart.png"
+import "../../images/empty-heart.png"
 import './Joke.css'
 
 
@@ -18,7 +18,7 @@ function handleSaved(event){
   event.preventDefault()
   const newJoke= joke
   if(!savedList.includes(joke)){
-    setSaved(true)
+  setSaved(true)
   addSaved(newJoke)
 }
 }
@@ -42,7 +42,7 @@ if(jokeErr){
       {jokeLoading ? <h1 className='err-message'>Loading Jokes....</h1> : <p>{joke.joke}</p>}
       <div className='heart'id={id} >
         
-      {!saved ? (<img id={id} onClick={handleSaved} className='empty-heart' src={require('../../empty-heart.png')} />) : (<img onClick={event=>handleUnsave(event)} className='full-heart' src={require('../../heart.png')} id={id} />)}
+      {!saved ? (<img id={id} onClick={handleSaved} className='empty-heart' src={require('../../images/empty-heart.png')} />) : (<img onClick={event=>handleUnsave(event)} className='full-heart' src={require('../../images/heart.png')} id={id} />)}
       </div>
       </div>
   )

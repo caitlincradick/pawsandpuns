@@ -1,7 +1,7 @@
 import React from 'react'
 import {useState} from 'react'
 import Joke from '../Joke/Joke'
-import '../../saved-puns.png'
+import '../../images/saved-puns.png'
 import './SavedJokes.css'
 
 const SavedJokes = ({joke, saved, setSaved, savedList, setSavedList}) => {
@@ -19,7 +19,7 @@ console.log('saved list', savedList)
  } else {
   return (
   <div className ='saved-container' key={Date.now()}> 
-   <img className='saved-logo' src={require('../../saved-puns.png')}/>
+   <img className='saved-logo' src={require('../../images/saved-puns.png')}/>
     <div className ='saved'>
     {savedJokes}
     </div>
