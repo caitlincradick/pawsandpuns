@@ -1,6 +1,8 @@
 import React from 'react'
 import {useState} from 'react'
 import Joke from '../Joke/Joke'
+import '../../saved-puns.png'
+import './SavedJokes.css'
 
 const SavedJokes = ({joke, saved, setSaved, savedList, setSavedList}) => {
 
@@ -15,7 +17,7 @@ console.log('saved list', savedList)
   console.log('saved JOKES', savedJokes)
   return (
   <div className ='saved-container' key={Date.now()}> 
-    <h1> My Saved Jokes</h1>
+   <img className='saved-logo' src={require('../../saved-puns.png')}/>
     <div className ='saved'>
     {savedJokes}
     </div>
