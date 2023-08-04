@@ -32,8 +32,9 @@ function handleUnsave(event){
 }
 }
 
+
 if(jokeErr){
-  return <h1 className='err-message'>An error has occured: {jokeErr}</h1>
+  return <h1 className='joke-err-message'>An error has occured: {jokeErr}</h1>
 }
 
   return (
