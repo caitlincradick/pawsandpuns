@@ -3,8 +3,9 @@ import "../../images/sad-kitty.png"
 import "./PageNotFound.css"
 
 const PageNotFound = () => {
+  
   return (
-    <div className = 'page-not-found'>
+    <div className='page-not-found'>
       <h1>Sorry.. 404 error, page not found.</h1>
       <img src={require('../../images/sad-kitty.png')}></img>
     </div>

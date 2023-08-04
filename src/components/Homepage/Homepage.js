@@ -6,55 +6,48 @@ import './Homepage.css'
 
 
 const Homepage = ({ showMoreJokes,savedList, setSavedList, addSaved, joke, setJoke, saved, setSaved}) => {
-  // const [saved, setSaved] = useState(false)
-// const [joke, setJoke] = useState("")
+  
 const [cat, setCat] = useState("")
 const [catLoading, setCatLoading] = useState(false)
 const [catErr, setCatErr] = useState("")
 const [jokeLoading, setJokeLoading] = useState("")
 const [jokeErr, setJokeErr] = useState("")
 
-console.log('ID', joke.id)
-
-
-useEffect(() => {
-  setCatLoading(true)
-  getCat()
-    .then(data => setCat(data.url))
+  useEffect(() => {
+    setCatLoading(true)
+    getCat()
+      .then(data => setCat(data.url))
       .catch(catErr => {
-        if(catErr) {
-        setCatErr(catErr)
-      }
+        if (catErr) {
+          setCatErr(catErr)
+        }
       })
       .finally(() => {
         setCatLoading(false)
       })
-    // })
-}, [])
+  }, [])
 
-useEffect(() => {
-  getJokes()
-    .then(data => {
-      setJoke(data)
-      setSaved(false)
-    })
-    .catch(jokeErr => {
-      console.log('JOKE ERR', jokeErr)
-      if(jokeErr) {
-        setJokeErr(jokeErr.message)
-      }
-    })
-    .finally(() => {
-      setJokeLoading(false)
-    })
-}, [])
+  useEffect(() => {
+    getJokes()
+      .then(data => {
+        setJoke(data)
+        setSaved(false)
+      })
+      .catch(jokeErr => {
+        console.log('JOKE ERR', jokeErr)
+        if (jokeErr) {
+          setJokeErr(jokeErr.message)
+        }
+      })
+      .finally(() => {
+        setJokeLoading(false)
+      })
+  }, [])
 
 
 if(catErr){
   return <h1 className='cat-err-message'>An error has occured.</h1>
 }
-
-// console.log('cat',catErr)
 
   return (
     <div className ='joke-container'>
