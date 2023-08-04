@@ -22,9 +22,7 @@ useEffect(() => {
   getCat()
     .then(data => setCat(data.url))
       .catch(catErr => {
-        if(catErr === 500) {
-          setCatErr('Oh no, looks there is a server error!')
-      } else {
+        if(catErr) {
         setCatErr(catErr)
       }
       })
@@ -41,10 +39,8 @@ useEffect(() => {
       setSaved(false)
     })
     .catch(jokeErr => {
-      if(jokeErr === 500) {
-        setJokeErr('Oh no, looks there is a server error!')
-      } else {
-        setJokeErr(jokeErr)
+      if(jokeErr) {
+        setJokeErr(jokeErr.message)
       }
     })
     .finally(() => {
@@ -52,13 +48,16 @@ useEffect(() => {
     })
 }, [])
 
+
 if(catErr){
-  return <h1 className='err-message'>An error has occured: {catErr}</h1>
+  return <h1 className='cat-err-message'>An error has occured.</h1>
 }
+
+console.log('cat',catErr)
 
   return (
     <div className ='joke-container'>
-      {catLoading ? <h1 className='err-message'>Loading Cats....</h1> : <img className='gif' src={cat} alt="cat-gif"></img>}
+      {catLoading ? <h1 className='cat-loading-message'>Loading Cats....</h1> : <img className='gif' src={cat} alt="cat-gif"></img>}
       <div className= 'joke'>
      <Joke jokeErr={jokeErr} jokeLoading={jokeLoading}id={joke.id} joke={joke} saved={saved} setSaved={setSaved} savedList={savedList} setSavedList={setSavedList} addSaved={addSaved} />
      <button className='random-btn' onClick={showMoreJokes}>Show More Jokes</button>
