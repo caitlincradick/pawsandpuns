@@ -17,7 +17,9 @@
     grid-gap: 2px;
   }
  
-
+.no-puns {
+  text-align: center;
+}
 
 .saved-logo{
   height: 15vh;
