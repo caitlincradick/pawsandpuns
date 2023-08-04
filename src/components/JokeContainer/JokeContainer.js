@@ -30,7 +30,7 @@ useEffect(() => {
 
   return (
     <div className ='joke-container'>
-      <img src={cat} alt="cat-gif"></img>
+      <img className='gif' src={cat} alt="cat-gif"></img>
       <div className= 'joke'>
      <Joke id={joke.id} joke={joke} saved={saved} setSaved={setSaved} savedList={savedList} setSavedList={setSavedList} addSaved={addSaved} />
      </div>

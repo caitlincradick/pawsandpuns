@@ -1,7 +1,27 @@
 .saved-container {
-  border:solid black 2px
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .saved {
-  border:solid black 2px; 
-  font-size: xx-large;
+  font-size: large;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 20%;
+  padding-right:20%;
+    padding: 3px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2px;
+  }
+ 
+
+
+.saved-logo{
+  height: 15vh;
+    width: 30vw;
+    margin: 3%;
 }
+
