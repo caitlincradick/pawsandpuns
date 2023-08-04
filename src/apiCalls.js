@@ -11,13 +11,14 @@ export function getJokes() {
     }
     return res.json();
   })
-  .catch(error => {
-    console.error('Error fetching jokes:', error);
-    throw error; 
-  });
 }
 
 export function getCat() {
   return fetch('https://cataas.com/cat/gif')
-    .then(res => res)
+  .then(res => {
+    if (!res.ok) {
+      throw new Error('Bad Network Response');
+    }
+    return res;
+  })
 }
