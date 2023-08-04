@@ -29,5 +29,11 @@ describe('template spec', () => {
     .get('.saved-container').find('.saved').find('.joke-card').should('be.visible').contains('p', 'Why did the chicken get a penalty? For fowl play.')
     .get('nav').find('.kitty').click()
   })
-
+  it('Should be able to unsave joke and go home', () => {
+    cy.get('.joke-card').find('.empty-heart').click()
+    .get('nav').find('.purrfect-btn').click()
+    .get('.joke-card').find('.full-heart').click()
+    .get('.no-puns').should('be.visible')
+    .get('nav').find('.kitty').click()
+  })
 })
