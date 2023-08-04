@@ -57,7 +57,7 @@ if(catErr){
     <div className ='joke-container'>
       {catLoading ? <h1 className='err-message'>Loading Cats....</h1> : <img className='gif' src={cat} alt="cat-gif"></img>}
       <div className= 'joke'>
-     <Joke id={joke.id} joke={joke} saved={saved} setSaved={setSaved} savedList={savedList} setSavedList={setSavedList} addSaved={addSaved} />
+     <Joke jokeErr={jokeErr} jokeLoading={jokeLoading}id={joke.id} joke={joke} saved={saved} setSaved={setSaved} savedList={savedList} setSavedList={setSavedList} addSaved={addSaved} />
      </div>
     </div>
   )
