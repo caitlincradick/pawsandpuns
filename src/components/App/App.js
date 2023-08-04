@@ -1,7 +1,7 @@
 import './App.css';
 import {useState, useEffect} from 'react'
 import { getJokes, getCat } from '../../apiCalls';
-import JokeContainer from '../JokeContainer/JokeContainer';
+import Homepage from '../Homepage/Homepage'
 import NavBar from '../NavBar/NavBar';
 import {Routes, Route, Navigate} from 'react-router-dom'
 import SavedJokes from '../SavedJokes/SavedJokes';
@@ -37,7 +37,7 @@ console.log(joke)
     <NavBar />
   <Routes>
     <Route path = "/" element = {
-      <JokeContainer  showMoreJokes={showMoreJokes} savedList={savedList} setSavedList={setSavedList} addSaved={addSaved} joke={joke} setJoke={setJoke} saved={saved} setSaved={setSaved}/>
+      <Homepage  showMoreJokes={showMoreJokes} savedList={savedList} setSavedList={setSavedList} addSaved={addSaved} joke={joke} setJoke={setJoke} saved={saved} setSaved={setSaved}/>
       } />
       <Route path= "/saved" element= {
         <SavedJokes savedList={savedList} setSavedList={setSavedList} joke={joke} setJoke={setJoke} saved={true} setSaved={setSaved}/>

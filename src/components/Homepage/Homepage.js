@@ -2,10 +2,10 @@ import React from 'react'
 import {useState, useEffect} from 'react'
 import { getJokes, getCat } from '../../apiCalls'
 import Joke from '../Joke/Joke'
-import './JokeContainer.css'
+import './Homepage.css'
 
 
-const JokeContainer = ({ showMoreJokes,savedList, setSavedList, addSaved, joke, setJoke, saved, setSaved}) => {
+const Homepage = ({ showMoreJokes,savedList, setSavedList, addSaved, joke, setJoke, saved, setSaved}) => {
   // const [saved, setSaved] = useState(false)
 // const [joke, setJoke] = useState("")
 const [cat, setCat] = useState("")
@@ -67,4 +67,4 @@ if(catErr){
   )
 }
 
-export default JokeContainer
+export default Homepage
