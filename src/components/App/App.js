@@ -13,6 +13,7 @@ const [savedList, setSavedList] = useState([])
 const [joke, setJoke] = useState({id:"", joke:""})
 const [saved, setSaved] = useState(false)
 
+console.log(joke)
   function addSaved(newJoke) {
     setSavedList([...savedList, newJoke])
   }
