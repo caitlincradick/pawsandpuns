@@ -4,7 +4,10 @@ import { getJokes, getCat } from '../../apiCalls'
 import Joke from '../Joke/Joke'
 import './JokeContainer.css'
 
-const JokeContainer = ({ savedList, setSavedList, addSaved, joke, setJoke, saved, setSaved}) => {
+
+const JokeContainer = ({ showMoreJokes,savedList, setSavedList, addSaved, joke, setJoke, saved, setSaved}) => {
+  // const [saved, setSaved] = useState(false)
+// const [joke, setJoke] = useState("")
 const [cat, setCat] = useState("")
 const [catLoading, setCatLoading] = useState(false)
 const [catErr, setCatErr] = useState("")
@@ -58,6 +61,7 @@ if(catErr){
       {catLoading ? <h1 className='err-message'>Loading Cats....</h1> : <img className='gif' src={cat} alt="cat-gif"></img>}
       <div className= 'joke'>
      <Joke jokeErr={jokeErr} jokeLoading={jokeLoading}id={joke.id} joke={joke} saved={saved} setSaved={setSaved} savedList={savedList} setSavedList={setSavedList} addSaved={addSaved} />
+     <button className='random-btn' onClick={showMoreJokes}>Show More Jokes</button>
      </div>
     </div>
   )
