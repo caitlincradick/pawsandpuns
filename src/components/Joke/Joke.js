@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect} from 'react'
+import PropTypes from 'prop-types'
 import "../../images/heart.png"
 import "../../images/empty-heart.png"
 import './Joke.css'
@@ -44,5 +45,17 @@ if(jokeErr){
     </div>
   )
 }
-   
+
+Joke.propTypes = {
+  joke: PropTypes.object,
+  addSaved: PropTypes.func,
+  savedList: PropTypes.array,
+  setSavedList: PropTypes.func,
+  saved: PropTypes.bool,
+  setSaved: PropTypes.func,
+  id: PropTypes.string,
+  jokeLoading: PropTypes.any,
+  jokeErr: PropTypes.string
+};
+
 export default Joke

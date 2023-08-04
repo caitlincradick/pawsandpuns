@@ -1,5 +1,5 @@
 import './App.css';
-import {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react';
 import { getJokes } from '../../apiCalls';
 import Homepage from '../Homepage/Homepage'
 import NavBar from '../NavBar/NavBar';
@@ -45,5 +45,7 @@ const [saved, setSaved] = useState(false)
     </div>
   );
 };
+
+
 
 export default App;

@@ -1,5 +1,6 @@
 import React from 'react'
 import Joke from '../Joke/Joke'
+import PropTypes from 'prop-types'
 import '../../images/saved-puns.png'
 import './SavedJokes.css'
 
@@ -23,5 +24,12 @@ const SavedJokes = ({joke, saved, setSaved, savedList, setSavedList}) => {
   }
 }
 
+SavedJokes.propTypes = {
+  joke: PropTypes.object,
+  saved: PropTypes.bool,
+  setSaved: PropTypes.func,
+  savedList: PropTypes.array,
+  setSavedList: PropTypes.func
+};
 
 export default SavedJokes

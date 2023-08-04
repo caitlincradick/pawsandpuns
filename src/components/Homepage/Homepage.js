@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {useState, useEffect} from 'react'
 import { getJokes, getCat } from '../../apiCalls'
 import Joke from '../Joke/Joke'
@@ -59,5 +60,16 @@ if(catErr){
     </div>
   )
 }
+
+Homepage.propTypes = {
+  showMoreJokes: PropTypes.func,
+  savedList: PropTypes.array,
+  setSavedList: PropTypes.func,
+  addSaved: PropTypes.func,
+  joke: PropTypes.object,
+  setJoke: PropTypes.func,
+  saved: PropTypes.bool,
+  setSaved: PropTypes.func
+};
 
 export default Homepage
