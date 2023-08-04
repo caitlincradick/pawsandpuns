@@ -39,6 +39,7 @@ useEffect(() => {
       setSaved(false)
     })
     .catch(jokeErr => {
+      console.log('JOKE ERR', jokeErr)
       if(jokeErr) {
         setJokeErr(jokeErr.message)
       }
@@ -53,7 +54,7 @@ if(catErr){
   return <h1 className='cat-err-message'>An error has occured.</h1>
 }
 
-console.log('cat',catErr)
+// console.log('cat',catErr)
 
   return (
     <div className ='joke-container'>
