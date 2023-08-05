@@ -11,7 +11,7 @@ const Joke = ({joke, addSaved, savedList, setSavedList, saved, setSaved, id, jok
     if (savedList.includes(joke.joke)) {
       setSaved(true)
     }
-  }, [])
+  }, [joke.joke, savedList, setSaved])
 
   function handleSaved(event) {
     event.preventDefault()
