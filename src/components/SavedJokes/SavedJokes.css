@@ -28,7 +28,22 @@
   margin: 3%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1280px) {
+  .saved {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px; 
+    padding: 20px; 
+    font-size: 1rem; 
+    text-align: center; 
+  }
+  
+  .saved-logo {
+    width: 80%; 
+  }
+}
+
+
+@media (max-width: 530px) {
   .saved {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 10px; 
