@@ -44,7 +44,7 @@ const [jokeErr, setJokeErr] = useState("")
       .finally(() => {
         setJokeLoading(false)
       })
-  }, [])
+  }, [setJoke, setSaved])
 
 
 if(catErr){
