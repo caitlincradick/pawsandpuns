@@ -11,10 +11,11 @@
   justify-content: center;
   padding-left: 20%;
   padding-right:20%;
-    padding: 3px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2px;
+  padding: 3px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2px;
+  font-size:1.2rem;
   }
  
 .no-puns {
@@ -23,7 +24,20 @@
 
 .saved-logo{
   height: 15vh;
-    width: 30vw;
-    margin: 3%;
+  width: 30vw;
+  margin: 3%;
 }
 
+@media (max-width: 480px) {
+  .saved {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px; 
+    padding: 20px; 
+    font-size: 1rem; 
+    text-align: center; 
+  }
+  
+  .saved-logo {
+    width: 80%; 
+  }
+}

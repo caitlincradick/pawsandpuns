@@ -1,6 +1,6 @@
 .full-heart, .empty-heart{
-  height: 30px;
-  width:30px;
+  height: 5vh;
+  width:3.5vw;
 }
 
 .joke-card {
@@ -17,7 +17,10 @@
 }
 
 .heart{
-  height: 30px;
-  width:30px;
+  height: 5vh;
+  width:3.5vw;
 }
 
+.homepage-joke{
+  font-size:1.2rem
+}

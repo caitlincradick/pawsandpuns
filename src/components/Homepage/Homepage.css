@@ -21,6 +21,10 @@
   border-radius: 10%;
 }
 
+.purrfect-btn-home{
+  display:none
+}
+
 .random-btn {
   font-weight: 400;
   color:#ff8b60;
@@ -30,4 +34,39 @@
   background-color: whitesmoke;
   font-family: 'Indie Flower', cursive;
   font-size:medium;
+}
+
+@media(max-width: 480px) {
+.joke-container{
+  display:flex;
+  flex-direction: column;
+}
+
+  .joke{
+    font-size:large
+  }
+
+  .gif{
+    height: 50vh;
+    width: 50vw;
+    margin: 5%;
+    border-radius: 5%;
+  }
+ 
+  .random-btn {
+    font-size: small;
+  }
+
+  .purrfect-btn-home{
+    display: block;
+      margin-right: 40%;
+      font-weight: 400;
+      color:#4e4cce;
+      border-radius: 20%;
+      border:none;
+      background-color: #ffbdef;
+      font-family: 'Indie Flower', cursive;
+      text-align: center;
+  }
+
 }

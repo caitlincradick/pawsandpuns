@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {useState, useEffect} from 'react'
 import { getJokes, getCat } from '../../apiCalls'
+import {Link} from 'react-router-dom'
 import Joke from '../Joke/Joke'
 import './Homepage.css'
 
@@ -52,6 +53,9 @@ if(catErr){
 
   return (
     <div className ='joke-container'>
+      <Link to="/saved">
+          <button className='purrfect-btn-home'>View Purrfect Puns</button>
+        </Link>
       {catLoading ? <h1 className='cat-loading-message'>Loading Cats....</h1> : <img className='gif' src={cat} alt="cat-gif"></img>}
       <div className= 'joke'>
      <Joke jokeErr={jokeErr} jokeLoading={jokeLoading}id={joke.id} joke={joke} saved={saved} setSaved={setSaved} savedList={savedList} setSavedList={setSavedList} addSaved={addSaved} />

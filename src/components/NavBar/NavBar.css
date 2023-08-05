@@ -13,8 +13,14 @@ nav, .logo{
 
 
 .kitty{
-  height: 100px;
-  width:200px;
+  height: 17vh;
+  width:40vh;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; 
+  
 }
 
 .purrfect-btn{
@@ -25,4 +31,28 @@ nav, .logo{
   border:none;
   background-color: #ffbdef;
   font-family: 'Indie Flower', cursive;
+  text-align: center;
+}
+
+@media(max-width: 480px) {
+  .logo{
+    height:3vh;
+    width:3vw;
+  }
+  .nav{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    height:40%;
+    /* align-items: center;
+    justify-content: center; */
+  }
+
+  .button-container {
+    margin-top: 10px; 
+  }
+
+  .purrfect-btn {
+   display:none
+  }
 }
