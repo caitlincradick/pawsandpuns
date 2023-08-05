@@ -12,9 +12,11 @@ const NavBar = () => {
           <img className='kitty' alt='paws and puns logo with cute cat' src={require('../../images/paws-puns-logo.png')}></img>
         </div>
       </Link>
-      <Link to="/saved">
-        <button className='purrfect-btn'>View Purrfect Puns</button>
-      </Link>
+      <div className='button-container'>
+        <Link to="/saved">
+          <button className='purrfect-btn'>View Purrfect Puns</button>
+        </Link>
+      </div>
     </nav>
   )
 }
