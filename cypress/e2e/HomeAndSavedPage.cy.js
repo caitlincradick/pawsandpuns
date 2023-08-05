@@ -11,6 +11,12 @@ describe('template spec', () => {
     
     cy.visit('http://localhost:3000/')
   })
+  // it('Should have loading text if gifs are loading', () => {
+  //     cy.visit("http://localhost:3000/?delay=500")
+  //       .get(".cat-loading-message")
+  //       .should("be.visible")
+  // })
+
   it('Should display NavBar, gif and joke on the homepage', () => {
     cy.wait('@joke1')
     .get('nav').should('be.visible').find('.kitty').should('be.visible')
@@ -32,7 +38,6 @@ describe('template spec', () => {
     cy.get('.joke-card').find('.empty-heart').click()
     .get('nav').find('.purrfect-btn').click()
     .get('nav').should('be.visible').find('.kitty').should('be.visible')
-    //MAKE BUTTON NOT VISIBLE IN SAVEDDDDDDDD git s
     .get('.saved-container').should('be.visible')
     .get('.saved-container').find('.saved').should('be.visible').should('have.length', 1)
     .get('.saved-container').find('.saved').find('.joke-card').should('be.visible').contains('p', 'Why did the chicken get a penalty? For fowl play.')
