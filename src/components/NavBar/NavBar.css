@@ -3,7 +3,7 @@ nav, .logo{
   /* border:solid black 3px; */
   background-color:#f9efec;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   opacity: 90%;
   font-family: 'Indie Flower', cursive;
   height:18vh
@@ -34,7 +34,7 @@ nav, .logo{
   text-align: center;
 }
 
-@media(max-width: 480px) {
+@media(max-width: 530px) {
   .logo{
     height:3vh;
     width:3vw;
