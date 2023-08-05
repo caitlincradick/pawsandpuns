@@ -3,10 +3,10 @@ The project aims to address the issue of stress and burnout among Turing School 
 
 # Deployed Website
 
-[Paw's and Puns](https://pawsandpuns.vercel.app/)
+[Paws and Puns](https://pawsandpuns.vercel.app/)
 
 # Preview
-![Paws and Puns]()
+![paws puns](https://github.com/caitlincradick/pawsandpuns/assets/119264690/b851feba-7450-415d-8aff-12cab6bd1746)
 
 # COLLABORATORS
 - Caitlin Cradick - [Github](https://github.com/caitlincradick) | [LinkedIn](https://www.linkedin.com/in/caitlincradick/)
